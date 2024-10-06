@@ -18,7 +18,7 @@ public class Main {
 
         Random random = new Random();
 
-        for (int i = 0; i < array.length; i++) {
+        for(int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(100);
             result+=array[i];
             System.out.print(array[i] + " ");
@@ -35,14 +35,14 @@ public class Main {
 
         Random random = new Random();
 
-        for (int i = 0; i < array.length; i++) {
+        for(int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(100);
             System.out.print(array[i] + " ");
         }
 
         maxElement = array[0];
 
-        for (int i = 0; i < array.length; i++) {
+        for(int i = 0; i < array.length; i++) {
             if (array[i] > maxElement)
                 maxElement = array[i];
         }
@@ -66,17 +66,17 @@ public class Main {
         guessedWord = list.get(random.nextInt(list.size()));
         System.out.println("Загаданное слово: " + guessedWord);
 
-        for (int i = 0; i < guessedWord.length(); i++) {
+        for(int i = 0; i < guessedWord.length(); i++) {
             maskedWord += "#";
         }
 
         System.out.println(maskedWord);
 
-        while (!isGuessed) {
+        while(!isGuessed) {
             char userInput = scanner.next().charAt(0);
 
             for(int i = 0; i < guessedWord.length(); i++) {
-                if (userInput == guessedWord.charAt(i)) {
+                if(userInput == guessedWord.charAt(i)) {
                     maskedWord = maskedWord.substring(0, i) + userInput + maskedWord.substring(i + 1);
                 }
             }
