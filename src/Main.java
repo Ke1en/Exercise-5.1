@@ -43,7 +43,7 @@ public class Main {
         maxElement = array[0];
 
         for(int i = 0; i < array.length; i++) {
-            if (array[i] > maxElement)
+            if(array[i] > maxElement)
                 maxElement = array[i];
         }
         System.out.println();
